@@ -1,7 +1,7 @@
 FROM golang:1.14 as builder
 ADD . /go/src/github.com/tpretz/github-pr-resource
 WORKDIR /go/src/github.com/tpretz/github-pr-resource
-RUN curl -sL https://taskfile.dev/install.sh | sh
+RUN sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d v3.33.0
 RUN ./bin/task build
 
 FROM alpine:3.11 as resource
