@@ -1,4 +1,4 @@
-module github.com/telia-oss/github-pr-resource
+module github.com/tpretz/github-pr-resource
 
 require (
 	github.com/golang/protobuf v1.4.0 // indirect
